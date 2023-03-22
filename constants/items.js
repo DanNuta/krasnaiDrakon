@@ -1,9 +1,10 @@
-import {ImagesIndex} from "../constants";
+import {imagesIndex} from "../images/index.js";
+
 
 export const items = [
     {
         id: 1,
-        img: ImagesIndex.item1,
+        img: imagesIndex.item1,
         title: `Салат из водорослей "Чука", 1000 гр`,
         price: 468,
         reduction: {
