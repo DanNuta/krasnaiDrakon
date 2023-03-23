@@ -1,4 +1,4 @@
-import items1 from "./items/1.png";
+//import items1 from "../images/items/1.png";
 // import items2 from "../images/items/2.png";
 // import items3 from "../images/items/3.png";
 // import items4 from "../images/items/4.png";
@@ -10,15 +10,15 @@ import items1 from "./items/1.png";
 // import items10 from "../images/items/10.png";
 
 
- export const imagesIndex = {
-    item1: './items/1.png',
-    // item2: items2,
-    // item3: items3,
-    // item4: items4,
-    // item5: items5,
-    // item6: items6,
-    // item7: items7,
-    // item8: items8,
-    // item9: items9,
-    // item10: items10,
+ export const imagesItems = {
+    item1: "../images/items/1.png",
+    item2: "../images/items/2.png",
+    item3: "../images/items/3.png",
+    item4: "../images/items/4.png",
+    item5: "../images/items/5.png",
+    item6: "../images/items/6.png",
+    item7: "../images/items/7.png",
+    item8: "../images/items/8.png",
+    item9: "../images/items/9.png",
+    item10: "../images/items/10.png",
 }
