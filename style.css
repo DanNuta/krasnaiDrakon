@@ -50,6 +50,12 @@
   --fs-services-title:  var(--fs-16);
   --fs-services-desc:  var(--fs-14);
 
+
+  --size-12: .75rem;
+  --size-16: 1rem;
+  --size-24: 1.5rem;
+
+
 }
 
 @media only screen and (min-width: 20rem){
