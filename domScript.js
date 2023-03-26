@@ -21,7 +21,6 @@ const extendNavList = document.querySelector(".extend_nav_list");
 const dots = document.querySelector(".dots");
 const slider = document.querySelector(".slider_ul");
 
-
 extendNavLaptop.forEach(item => {
     extendNavList.append(createLiNavLaptop(item))
 })
@@ -171,7 +170,13 @@ function createItemHealperDom(target){
 
     const divTags = document.createElement("div");
 
-    
+    divContainer.classList.add("div_container");
+    divContainer.classList.add("border_radius_item");
+
+    divImg.classList.add("div_images")
+
+
+    divTags.classList.add("tags")
 
 
     // title
@@ -188,21 +193,33 @@ function createItemHealperDom(target){
 
     if(target.reduction.reductionBoolean){
         btnReducePrice.innerHTML = target.reduction.reductionCounter;
-        pPriceReduction.innerHTML = target.price;
+
+        pPriceReduction.innerHTML =`${target.price}₽`;
+        pPriceReduction.classList.add("fw-300");
+        pPriceReduction.classList.add("ff-light");
+        pPriceReduction.classList.add("text-throw");
+        pPriceReduction.classList.add("clr-text-silver");
 
         divPriceReduction.append(pPriceReduction);
         divPriceReduction.append(btnReducePrice);
     }
 
-    pPrice.innerHTML = target.price;
+    pPrice.innerHTML = `${target.price}₽`;
+    pPrice.classList.add("clr-red");
+    pPrice.classList.add("fw-700");
+    pPrice.classList.add("ff-bold");
 
     divPriceReduction.append(pPrice);
+
+    divPriceReduction.classList.add("price_reducer_div");
+    divPriceReduction.classList.add("flex_justify")
 
     btnAddToCard.innerHTML = "В корзину";
     btnAddToCard.classList.add("btn_add_to_card");
     btnAddToCard.classList.add("border_radius_btn_item");
-    btnAddToCard.classList.add("fw-600");
+    btnAddToCard.classList.add("fw-700");
     btnAddToCard.classList.add("fs-btn-item");
+    btnAddToCard.classList.add("ff-bold");
 
     divShop.append(btnAddToCard);
 
