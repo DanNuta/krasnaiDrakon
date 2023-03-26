@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="script.js" defer type="module"></script>
+    <script src="domScript.js" defer type="module"></script>
+    <script src="script.js" defer ></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,16 +16,16 @@
 
         <!-- navigation -->
         <div class="container">
-            <div class="navigation">
+            <div class="navigation | flex_justify">
 
                 <div>
-                    <div class="mobile_style">
+                    <div class="mobile-style">
                         <button>
                             <img src="./images/icons/menuBars.svg" alt="bars">
                         </button>
                     </div>
 
-                    <div class="tablet_style">
+                    <div class="tablet-style">
                         <span>
                             <button>
                                 <img src="./images/icons/menuBars.svg" alt="bars">
@@ -33,7 +34,7 @@
                         </span>
                     </div>
 
-                    <div class="laptop_style">
+                    <div class="laptop-style">
                         <div>
                             <a href="#"><p>Магазины</p></a>
                             <span>
@@ -47,22 +48,22 @@
                             </span>
                         </div>
                     </div>
-                    <div class="desktop_style"></div>
+                    <div class="desktop-style"></div>
                 </div>
 
 
 
                 <div>
-                    <div class="mobile_style">
+                    <div class="mobile-style">
                         <a href="#">
-                            <img src="./images/logo/logo.svg" alt="logo">
+                            <img width="160" src="./images/logo/logo.svg" alt="logo">
                         </a>
                     </div>
                 </div>
 
 
                 <div>
-                    <div class="mobile_style">
+                    <div class="mobile-style">
                         <a href="tel:123-456-7890">
                             <img src="./images/icons/calling.svg" alt="calling">
                         </a>
@@ -81,13 +82,13 @@
                             </button>
                         </div>
                     </div>
-                    <div class="laptop_style">
 
-                        <nav role="list" class="nav_tablet">
-                        </nav>
+                    <div class="laptop-style">
+                        <nav role="list" class="nav-laptop"></nav>
+                        <ul class="extend_nav_list"></ul>
                     </div>
 
-                    <div class="desktop_style">
+                    <div class="desktop-style">
 
                         <div>
                             <div>
@@ -99,8 +100,7 @@
                         </div>
 
 
-                        <nav role="list" class="nav_desktop">
-                        </nav>
+                        <nav role="list" class="nav-desktop"></nav>
                     </div>
                 </div>
 
@@ -115,9 +115,7 @@
             <div class="search">
 
                 <div>
-
-
-                    <div class="logo">
+                    <div class="logo laptop-style">
                         <a href="#">
                             <img src="./images/logo/logo.svg" alt="logo">
                         </a>
@@ -125,33 +123,35 @@
 
 
 
-                    <div class="btn_catalog">
-                        <div>
-                            <span>
+                    <div>
+                        <div class="location_mail_search">
+                            <span class="flex ">
                                 <img src="./images/icons/location.svg" alt="location">
-                                Санкт-Петербург
+                                <p class="fs-mail-location ff-regular">Санкт-Петербург</p>
                             </span>
 
-                            <span>
+                            <span class="flex fs-mail-location ff-regular">
                                 <img src="./images/icons/mail.svg" alt="location">
-                                reddragon-spb@mail.ru
+                                <p class="fs-mail-location ff-regular text-underline">reddragon-spb@mail.ru</p>
                             </span>
                         </div>
 
 
-                        <div>
-                            <button>
+                        
+                            <button class="btn_catalog | flex border_radius_search fw-600 fs-14">
                                 <img src="./images/icons/menuWhite.svg" alt="Bars">
-                                Каталог товаров
+                               <p> Каталог товаров</p>
                             </button>
-                        </div>
+                        
                     </div>
 
 
                     <div class="search_type">
-                        <div>
-                            <img src="./images/icons/search.svg" alt="">
-                            <input type="search" name="search" id="search">
+                        <div class="search | flex border_radius_search">
+                            <button class="flex_center">
+                                <img src="./images/icons/search.svg" alt="">
+                            </button>
+                            <input class="input_general_style" type="search" name="search" id="search" placeholder="Поиск по товарам">
                         </div>
                     </div>
 
@@ -162,7 +162,7 @@
 
 
 
-                <div>
+                <div class="laptop-style">
                     <a href="tel:123-456-7890">
                         <div>
                             <img src="./images/icons/calling.svg" alt="call">
@@ -194,9 +194,19 @@
 
     <main>
 
+
+        <!-- home -->
+
         <section>
             <div class="container">
+                <div>
+                    <div class="images_slider">
+                        <ul class="slider_ul"></ul>
+                        
+                        <div class="dots"></div>
+                    </div>
 
+                </div>
             </div>
         </section>
 
@@ -204,7 +214,7 @@
         <!-- services -->
 
 
-        <section>
+        <section class="services">
             <div class="container">
                 <div>
 
@@ -241,48 +251,313 @@
 
         <!-- project -->
 
-
         <section>
             <div class="container">
-                <div>
-                    <h1>Наши проекты</h1>
+                <div class="project">
+
+                    <h1 class="fs-primary-header clr-text-primary ff-semin-bold text-center">Наши проекты</h1>
 
 
-                        <div>
+                    <div class="project_items">
+                
+                        <div class="clr-project-1 border_radius_project flex_center_column_row">
+                            
                             <img src="./images/project/firstProject.png" alt="Lenka">
-                            <div>
+
+                            <button>
                                 <img src="./images/icons/arrow-up.svg" alt="arrow-up">
-                            </div>
+                            </button>
                         </div>
 
-                        <div>
-                            <img src="./images/project/secondProject.png" alt="Lenka">
-                            <div>
+                        <div class="clr-project-2 border_radius_project flex_center_column_row">
+                          
+                                <img src="./images/project/secondProject.png" alt="Lenka">
+                            
+                            <button>
                                 <img src="./images/icons/arrow-up.svg" alt="arrow-up">
-                            </div>
+                            </button>
                         </div>
 
-                        <div>
+                        <div class="clr-project-3 border_radius_project flex_center_column_row">
                             <img src="./images/project/therdProject.png" alt="Lenka">
-                            <div>
+                            <button>
                                 <img src="./images/icons/arrow-up.svg" alt="arrow-up">
-                            </div>
+                            </button>
                         </div>
 
-                        <div>
+                        <div class="clr-project-4 border_radius_project flex_center_column_row">
                             <img src="./images/project/fourthProject.png" alt="Lenka">
-                            <div>
+                            <button>
                                 <img src="./images/icons/arrow-up.svg" alt="arrow-up">
-                            </div>
+                            </button>
                         </div>
+
+                    </div>
                 </div>
             </div>
         </section>
 
+
+         <!-- menu -->
+
+         <section>
+            <div class="container">
+                <div class="menu">
+                    <!-- here is the meniu  -->
+                </div>
+            </div>
+         </section>
+
+
+         <!-- slogan -->
+
+         <section>
+            <div class="container">
+                <div>
+                    <div>
+                        <h1>Эксклюзивные товары</h1>
+                    </div>
+                    <div>
+                        <!-- <img src="./images/slogan/bg.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
+         </section>
+
+
+          <!-- items -->
+
+          <section>
+            <div class="container">
+                <div>
+                   <div class="btn">
+                    <button data-all="all">Лучшие предложения</button>
+                    <button data-new="true">Новинки</button>
+                   </div>
+
+
+                   <div class="item">
+                    <!-- here is items in js -->
+                   </div>
+
+                </div>
+            </div>
+          </section>
+
+
+           <!-- exotic food -->
+           <section>
+            <div class="container">
+                <div>
+                    <div>
+                        <h1>Попробуйте новые вкусы тайской кухни</h1>
+                        <button>Посмотреть сейчас</button>
+                    </div>
+
+                    
+                        <div>
+                            <h1>Ощутите всю гамму морепродуктов для восточных блюд</h1>
+                            <button>Посмотреть сейчас</button>
+                        </div>
+                    
+                </div>
+            </div>
+           </section>
+
+
+           <!-- exotic food incredients -->
+
+           <section>
+            <div class="container">
+                <div>
+                    <div>
+                      <div>
+                        <h1>Продукты и ингредиенты для суши.
+                            Продукты для Азиатской кухни</h1>
+                      </div>
+
+                      <div>
+                        <h1>Рады видеть вас в интернет-магазине КРАСНЫЙ ДРАКОН!</h1>
+
+                        <p>Мы занимаемся импортом и продажей товаров из Японии, Китая, Южной Кореи, Таиланда, Индии и Вьетнама. Главным преимуществом нашего магазина является огромный ассортимент продуктов для приготовления блюд паназиатской кухни, а также снеков, напитков, сладостей и фруктов. У нас представлены такие всемирно известные марки, как Lee Kum Kee, PRB, Aroy-D, FOCO, Thai Food King, Kanokwan, Thai Dancer, Kikkoman, Kewpie, Mizkan и многие другие!</p>
+
+                        <p>В нашем интернет-магазине вы можете сделать заказ на любую сумму и получить товар удобным для вас способом:</p>
+
+                        <ul>
+                                <li>
+                                    Самовывоз из 10 розничных магазинов г. Санкт-Петербург;
+                                </li>
+
+                                <li>
+                                    Доставка по РФ «Почтой России» или транспортными компаниями CDEK, Boxberry, ПЭК, «Деловые линии», PickPoint и проч. 
+                                </li>  
+
+                                <li>
+                                    При заказе от 1500 рублей (в зависимости от района) доставка по Санкт-Петербургу бесплатная! Подробности в разделе <span>Оплата и доставка</span>
+                                </li>
+
+                            </ul>
+
+
+                            <p>Также мы работаем с оптовыми клиентами и готовы предложить выгодные условия сотрудничества.</p>
+
+                            <div>
+                                <h1>Телефон для справок:</h1>
+                                <a href="tel:123-456-7890">8 (812) 701-01-87</a>
+                            </div>
+
+
+                            <div class="more">
+                                <button>
+                                    Подробнее о нас
+                                    <img src="./images/icons/arrow_down.svg" alt="arrow">
+                                </button>
+                            </div>
+
+                      </div>
+                    </div>
+
+
+
+
+                    <div>
+                        <div class="bg_css"></div>
+                        <!-- <img src="./images/about/about.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
+           </section>
+
+
+           <!-- next food -->
+
+
+           <section>
+
+            <div class="container">
+               
+                    <div class="title_btn">
+                        <div>
+                            <h1>Последние отзывы</h1>
+                        </div>
+
+                        <div class="next_prev">
+                            <button>
+                                <img src="./images/icons/arrowLeft.svg" alt="">
+                            </button>
+
+                            <button>
+                                <img src="./images/icons/arrowRight.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+            </div>
+
+
+            <div class="testimpnials_food">
+                
+            </div>
+           </section>
+
+
+
+
     </main>
 
 
+    
+
+
     <footer>
+
+        <div class="container">
+            <div>
+                <div>
+                    <a href="#">
+                        <img src="./images/logo/logo.svg" alt="Logo">
+                    </a>
+
+                    <ul role="list">
+                        <li><a href="#"><img src="./images/icons/socialMedia/facebook.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/icons/socialMedia/insta.svg" alt=""></a></li>
+                        <li><a href="#"><img src="./images/icons/socialMedia/www.svg" alt=""></a></li>
+                    </ul>
+
+                    <div>
+                        <h1>Политика конфиденциальности</h1>
+                        <p>ИП Журавлева Елена Андреевна
+                            ИНН 470411485269
+                            ОГРНИП 311784704700400</p>
+                    </div>
+
+                    <div>
+                        <h1>© Красный Дракон 1996 - 2021</h1>
+                        <h1>Created by <a href="#">Quadrodizain</a><img src="./images/icons/arrow_up_footer.svg" alt="Arrow"></h1>
+                    </div>
+                </div>
+
+
+                <div>
+                    <h1>Информация</h1>
+                    <nav>
+                        <ul class="footer_nav">
+
+                        </ul>
+                    </nav>
+                </div>
+
+                <div>
+                    <h1>Магазин</h1>
+
+                    <nav class="footer_magazin"></nav>
+                </div>
+
+                <div>
+                    <div>
+                        <h1>Контакты</h1>
+
+                        <ul>
+                            <li><a href="tel:8 (812) 701 01 87"><h1>8 (812) 701 01 87</h1></a></li>
+                            <li><a href="tel:8 (812) 701 02 02"><h1>8 (812) 701 02 02</h1></a></li>
+                            <li><a href="#">reddragon-spb@mail.ru</a></li>
+                            <li>Пн—Вс 10:00—21:00</li>
+                        </ul>
+                    </div>
+
+
+                    <div>
+                        <h1>Магазины</h1>
+
+                       <div>
+                            <div>
+                                <button>
+                                    <img src="./images/icons/location.svg" alt="Location">
+                                    Санкт-Петербург
+                                </button>
+                            </div>
+
+                            <div>
+                                <button>
+                                    <img src="./images/icons/location.svg" alt="Location">
+                                    Крым
+                                </button>
+                            </div>
+
+
+                            <div>
+                                <button>
+                                    <img src="./images/icons/location.svg" alt="Location">
+                                    Ярославль
+                                </button>
+                            </div>
+
+
+                       </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
 
     </footer>
 

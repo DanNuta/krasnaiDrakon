@@ -11,7 +11,7 @@
 
 
  export const imagesItems = {
-    item1: "../images/items/1.png",
+    item1: "./images/items/1.png",
     item2: "../images/items/2.png",
     item3: "../images/items/3.png",
     item4: "../images/items/4.png",
