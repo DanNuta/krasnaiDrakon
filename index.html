@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="domScript.js" defer type="module"></script>
-    <script src="script.js" defer ></script>
+    <script src="script.js" defer type="module" ></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -80,8 +80,8 @@
                                 <img src="./images/icons/iconNav/user.svg" alt="user">
                             </button>
                         </div>
-                        <div>
-                            <button class="flex_center_column_row">
+                        <div data-wishlist="0">
+                            <button class="flex_center_column_row" >
                                 <img src="./images/icons/iconNav/cart.svg" alt="user">
                             </button>
                         </div>
@@ -387,11 +387,11 @@
                 <div class="items">
                    <div class="btn_container">
                         <button class="btn_filter_items_padding active_btn_filter border_radius_item_btn_filter fs-btn-items-filter ff-semin-bold fw-600" data-all="all">Лучшие предложения</button>
-                        <button class="items_filter_btn btn_filter_items_padding border_radius_item_btn_filter fs-btn-items-filter ff-semin-bold fw-600 " data-new="true">Новинки</button>
+                        <button class="items_filter_btn btn_filter_items_padding border_radius_item_btn_filter fs-btn-items-filter ff-semin-bold fw-600 " data-new="new">Новинки</button>
                    </div>
 
 
-                   <div class="item">
+                   <div data-items class="item">
                     <!-- here is items in js -->
                    </div>
 
@@ -579,14 +579,14 @@
 
                        <div class="location_magazin |  mt-16">
                             <!-- <div class="border-radius-fixes-8">  -->
-                                <button class="border-radius-fixes-8">
+                                <button class="border-radius-fixes-8 flex_align_custom" style="--gap-custom: .625rem">
                                     <img src="./images/icons/location.svg" alt="Location">
                                     <p class="fs-14 ff-regular clr-white fw-400">Санкт-Петербург</p>
                                 </button>
                             <!-- </div> -->
 
                             
-                                <button class="border-radius-fixes-8">
+                                <button class="border-radius-fixes-8 flex_align_custom" style="--gap-custom: .625rem">
                                     <img src="./images/icons/location.svg" alt="Location">
                                     <p class="fs-14 ff-regular clr-white fw-400">Крым</p>
                                 </button>
@@ -594,7 +594,7 @@
 
 
                             
-                                <button class="border-radius-fixes-8">
+                                <button class="border-radius-fixes-8 flex_align_custom" style="--gap-custom: .625rem">
                                     <img src="./images/icons/location.svg" alt="Location">
                                     <p  class="fs-14 ff-regular clr-white fw-400">Ярославль</p>
                                 </button>

@@ -185,8 +185,6 @@ function createItemHealperDom(target){
     divTags.classList.add("tags")
 
 
-    console.log(windowSize)
-
     if(target.title.length > 20 && windowSize <= 320){
         const title = target.title.substring(0, 20);
         titleItem.innerHTML = `${title}...`;
@@ -247,6 +245,7 @@ function createItemHealperDom(target){
     btnAddToCard.classList.add("fw-700");
     btnAddToCard.classList.add("fs-btn-item");
     btnAddToCard.classList.add("ff-bold");
+    btnAddToCard.dataset.shop = `${target.id}`;
 
     divShop.append(btnAddToCard);
 
