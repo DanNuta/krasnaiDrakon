@@ -16,23 +16,27 @@
 
         <!-- navigation -->
         <div class="container">
-            <div class="navigation | flex_justify">
+            <div class="navigation | flex_justify_center">
 
-                <div>
-                    <div class="mobile-style">
-                        <button>
+                <div class="column_navigation_odd">
+                    <div class="mobile-style | flex_align">
+                        <button class="flex_center_column_row" id="open_nav_mobile">
                             <img src="./images/icons/menuBars.svg" alt="bars">
                         </button>
+
+                        <p class="fw-400 fs-12 ff-regular clr-text-primary">Меню</p>
+
+
                     </div>
 
-                    <div class="tablet-style">
+                    <!-- <div class="mobile-style">
                         <span>
                             <button>
                                 <img src="./images/icons/menuBars.svg" alt="bars">
                             </button>
                             <p>Menu</p>
                         </span>
-                    </div>
+                    </div> -->
 
                     <div class="laptop-style">
                         <div>
@@ -54,8 +58,8 @@
 
 
                 <div>
-                    <div class="mobile-style">
-                        <a href="#">
+                    <div class="mobile-style flex_center_column_row">
+                        <a class="flex_align"  href="#">
                             <img width="160" src="./images/logo/logo.svg" alt="logo">
                         </a>
                     </div>
@@ -64,20 +68,20 @@
 
                 <div>
                     <div class="mobile-style">
-                        <a href="tel:123-456-7890">
+                        <a class="mobile_phone | flex_center_column_row" href="tel:123-456-7890">
                             <img src="./images/icons/calling.svg" alt="calling">
                         </a>
                     </div>
 
 
-                    <div class="tablet-style">
+                    <div class="user_shop_tablet">
                         <div>
-                            <button>
+                            <button class="flex_center_column_row">
                                 <img src="./images/icons/iconNav/user.svg" alt="user">
                             </button>
                         </div>
                         <div>
-                            <button>
+                            <button class="flex_center_column_row">
                                 <img src="./images/icons/iconNav/cart.svg" alt="user">
                             </button>
                         </div>
@@ -88,18 +92,16 @@
                         <ul class="extend_nav_list"></ul>
                     </div>
 
-                    <div class="desktop-style">
+                    <div class="desktop-style-navigation disable_nav_mobile">
 
-                        <div>
+                       
                             <div>
-                                <button>
+                                <button id="nav_bars_close" class="flex_center">
                                     <img src="./images/icons/close.svg" alt="">
                                 </button>
-                                <h1>Meniu</h1>
+                                <h1 class="fw-400 ff-regular clr-text-primary fs-12">Меню</h1>
                             </div>
-                        </div>
-
-
+                        
                         <nav role="list" class="nav-desktop"></nav>
                     </div>
                 </div>
@@ -123,24 +125,24 @@
 
 
 
-                    <div>
+                    <div class="catalog_btn_email_search">
                         <div class="location_mail_search">
-                            <span class="flex ">
+                            <span class="flex_align">
                                 <img src="./images/icons/location.svg" alt="location">
                                 <p class="fs-mail-location ff-regular">Санкт-Петербург</p>
                             </span>
 
-                            <span class="flex fs-mail-location ff-regular">
+                            <span class="flex_align">
                                 <img src="./images/icons/mail.svg" alt="location">
-                                <p class="fs-mail-location ff-regular text-underline">reddragon-spb@mail.ru</p>
+                                <p class="fs-12 ff-regular text-underline">reddragon-spb@mail.ru</p>
                             </span>
                         </div>
 
 
                         
-                            <button class="btn_catalog | flex border_radius_search fw-600 fs-14">
+                            <button class="btn_catalog | flex border_radius_search ">
                                 <img src="./images/icons/menuWhite.svg" alt="Bars">
-                               <p> Каталог товаров</p>
+                               <p class=" fw-600 fs-14"> Каталог товаров</p>
                             </button>
                         
                     </div>
@@ -216,31 +218,31 @@
 
         <section class="services">
             <div class="container">
-                <div>
+                <div class="flex">
 
                     <div>
                         <img src="./images/icons/iconOffert/icon-park_truck.svg" alt="track">
-                        <h1>Бесплатная доставка</h1>
-                        <p>по Санкт-Петербургу от 1500 руб.</p>
+                        <h1 class="fs-services-title fw-700 ff-bold">Бесплатная доставка</h1>
+                        <p class="fs-services-desc ff-regular fw-400">по Санкт-Петербургу от 1500 руб.</p>
                     </div>
 
                     <div>
                         <img src="./images/icons/iconOffert/shop.svg" alt="shop">
-                        <h1>Бесплатный самовывоз</h1>
-                        <p>из 11 розничных магазинов</p>
+                        <h1 class="fs-services-title fw-700 ff-bold">Бесплатный самовывоз</h1>
+                        <p class="fs-services-desc ff-regular fw-400">из 11 розничных магазинов</p>
                     </div>
 
                     <div>
                         <img src="./images/icons/iconOffert/hand.svg" alt="shop">
-                        <h1>Выгодные условия</h1>
-                        <p>для оптовых клиентов</p>
+                        <h1 class="fs-services-title fw-700 ff-bold">Выгодные условия</h1>
+                        <p class="fs-services-desc ff-regular fw-400">для оптовых клиентов</p>
                     </div>
 
 
                     <div>
                         <img src="./images/icons/iconOffert/touch.svg" alt="shop">
-                        <h1>Дисконтная карта</h1>
-                        <p>на скидку 7% при покупке от 3000 руб.</p>
+                        <h1 class="fs-services-title fw-700 ff-bold">Дисконтная карта</h1>
+                        <p class="fs-services-desc ff-regular fw-400">на скидку 7% при покупке от 3000 руб.</p>
                     </div>
                 </div>
             </div>
@@ -251,7 +253,7 @@
 
         <!-- project -->
 
-        <section>
+        <section class="desktop_projects">
             <div class="container">
                 <div class="project">
 
@@ -300,7 +302,7 @@
 
          <!-- menu -->
 
-         <section>
+         <section class="menu_section">
             <div class="container">
                 <div class="menu">
                     <!-- here is the meniu  -->
@@ -325,6 +327,59 @@
          </section>
 
 
+
+
+
+         <!-- project mobile -->
+
+
+         <section class="mobile_project">
+            <div class="container">
+                <div class="project">
+
+                    <h1 class="fs-primary-header clr-text-primary ff-semin-bold text-center">Наши проекты</h1>
+
+
+                    <div class="project_items">
+                
+                        <div class="clr-project-1 border_radius_project flex_center_column_row">
+                            
+                            <img src="./images/project/firstProject.png" alt="Lenka">
+
+                            <button>
+                                <img src="./images/icons/arrow-up.svg" alt="arrow-up">
+                            </button>
+                        </div>
+
+                        <div class="clr-project-2 border_radius_project flex_center_column_row">
+                          
+                                <img src="./images/project/secondProject.png" alt="Lenka">
+                            
+                            <button>
+                                <img src="./images/icons/arrow-up.svg" alt="arrow-up">
+                            </button>
+                        </div>
+
+                        <div class="clr-project-3 border_radius_project flex_center_column_row">
+                            <img src="./images/project/therdProject.png" alt="Lenka">
+                            <button>
+                                <img src="./images/icons/arrow-up.svg" alt="arrow-up">
+                            </button>
+                        </div>
+
+                        <div class="clr-project-4 border_radius_project flex_center_column_row">
+                            <img src="./images/project/fourthProject.png" alt="Lenka">
+                            <button>
+                                <img src="./images/icons/arrow-up.svg" alt="arrow-up">
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
           <!-- items -->
 
           <section>
@@ -346,18 +401,18 @@
 
 
            <!-- exotic food -->
-           <section>
+           <section class="exotic_food_container">
             <div class="container">
-                <div>
-                    <div>
-                        <h1>Попробуйте новые вкусы тайской кухни</h1>
-                        <button>Посмотреть сейчас</button>
+                <div class="exotic_food">
+                    <div class="border-radius-fixes-16">
+                        <h1 class="clr-white fw-600 ff-semin-bold fs-sedondary-header ">Попробуйте новые вкусы тайской кухни</h1>
+                        <button class=" fw-600 ff-semin-bold clr-white border-radius-fixes-12 bg-red">Посмотреть сейчас</button>
                     </div>
 
                     
-                        <div>
-                            <h1>Ощутите всю гамму морепродуктов для восточных блюд</h1>
-                            <button>Посмотреть сейчас</button>
+                        <div class="border-radius-fixes-16">
+                            <h1 class="fw-600 ff-semin-bold fs-sedondary-header clr-text-primary " >Ощутите всю гамму морепродуктов для восточных блюд</h1>
+                            <button class="fw-600 ff-semin-bold clr-white border-radius-fixes-12 bg-red">Посмотреть сейчас</button>
                         </div>
                     
                 </div>
@@ -367,52 +422,52 @@
 
            <!-- exotic food incredients -->
 
-           <section>
+           <section class="exotic_food_incredients">
             <div class="container">
                 <div>
                     <div>
                       <div>
-                        <h1>Продукты и ингредиенты для суши.
+                        <h1 class="mb-36 ff-semin-bold fw-600 clr-text-primary fs-primary-header">Продукты и ингредиенты для суши.
                             Продукты для Азиатской кухни</h1>
                       </div>
 
-                      <div>
-                        <h1>Рады видеть вас в интернет-магазине КРАСНЫЙ ДРАКОН!</h1>
+                      <div class="mt-16-all-element">
+                        <h1 class="mb-16 ff-semin-bold fw-600 clr-red fs-20">Рады видеть вас в интернет-магазине КРАСНЫЙ ДРАКОН!</h1>
 
-                        <p>Мы занимаемся импортом и продажей товаров из Японии, Китая, Южной Кореи, Таиланда, Индии и Вьетнама. Главным преимуществом нашего магазина является огромный ассортимент продуктов для приготовления блюд паназиатской кухни, а также снеков, напитков, сладостей и фруктов. У нас представлены такие всемирно известные марки, как Lee Kum Kee, PRB, Aroy-D, FOCO, Thai Food King, Kanokwan, Thai Dancer, Kikkoman, Kewpie, Mizkan и многие другие!</p>
+                        <p class="mb-16 ff-regular line-height-24 clr-text-primary fw-400 fs-16">Мы занимаемся импортом и продажей товаров из Японии, Китая, Южной Кореи, Таиланда, Индии и Вьетнама. Главным преимуществом нашего магазина является огромный ассортимент продуктов для приготовления блюд паназиатской кухни, а также снеков, напитков, сладостей и фруктов. У нас представлены такие всемирно известные марки, как Lee Kum Kee, PRB, Aroy-D, FOCO, Thai Food King, Kanokwan, Thai Dancer, Kikkoman, Kewpie, Mizkan и многие другие!</p>
 
-                        <p>В нашем интернет-магазине вы можете сделать заказ на любую сумму и получить товар удобным для вас способом:</p>
+                        <p class="mb-16 ff-regular line-height-24 clr-text-primary fw-400 fs-16">В нашем интернет-магазине вы можете сделать заказ на любую сумму и получить товар удобным для вас способом:</p>
 
-                        <ul>
+                        <ul class="mb-16">
                                 <li>
-                                    Самовывоз из 10 розничных магазинов г. Санкт-Петербург;
+                                    <p>Самовывоз из 10 розничных магазинов г. Санкт-Петербург;</p>
                                 </li>
 
                                 <li>
-                                    Доставка по РФ «Почтой России» или транспортными компаниями CDEK, Boxberry, ПЭК, «Деловые линии», PickPoint и проч. 
+                                    <p>Доставка по РФ «Почтой России» или транспортными компаниями CDEK, Boxberry, ПЭК, «Деловые линии», PickPoint и проч.</p> 
                                 </li>  
 
                                 <li>
-                                    При заказе от 1500 рублей (в зависимости от района) доставка по Санкт-Петербургу бесплатная! Подробности в разделе <span>Оплата и доставка</span>
+                                    <p>При заказе от 1500 рублей (в зависимости от района) доставка по Санкт-Петербургу бесплатная! Подробности в разделе <span>Оплата и доставка</span></p>
                                 </li>
 
                             </ul>
 
 
-                            <p>Также мы работаем с оптовыми клиентами и готовы предложить выгодные условия сотрудничества.</p>
+                            <p class="mb-16 ff-regular line-height-24 clr-text-primary fw-400 fs-16">Также мы работаем с оптовыми клиентами и готовы предложить выгодные условия сотрудничества.</p>
 
-                            <div>
-                                <h1>Телефон для справок:</h1>
-                                <a href="tel:123-456-7890">8 (812) 701-01-87</a>
+                            <div class="flex_align mb-16">
+                                <h1 class="ff-regular line-height-24 clr-text-primary fw-400 fs-16">Телефон для справок:</h1>
+                                <a href="tel:123-456-7890" class="ff-bold  clr-text-primary fw-700 fs-16"> 8 (812) 701-01-87</a>
                             </div>
 
 
-                            <div class="more">
-                                <button>
-                                    Подробнее о нас
+                            
+                                <button class="flex_align_custom border-radius-fixes-12" style="--gap-custom: .625rem;" >
+                                    <p class="ff-semin-bold fw-600 fs-14 clr-red ">Подробнее о нас</p>
                                     <img src="./images/icons/arrow_down.svg" alt="arrow">
                                 </button>
-                            </div>
+                            
 
                       </div>
                     </div>
@@ -420,9 +475,9 @@
 
 
 
-                    <div>
+                    <div class="images_about">
+                        <img src="./images/about/about.png" alt="">
                         <div class="bg_css"></div>
-                        <!-- <img src="./images/about/about.png" alt=""> -->
                     </div>
                 </div>
             </div>
@@ -432,7 +487,7 @@
            <!-- next food -->
 
 
-           <section>
+           <section class="food_testimonials">
 
             <div class="container">
                
@@ -454,13 +509,8 @@
             </div>
 
 
-            <div class="testimpnials_food">
-                
-            </div>
+            <div class="testimpnials_food"></div>
            </section>
-
-
-
 
     </main>
 
@@ -468,13 +518,13 @@
     
 
 
-    <footer>
+    <footer class="clr-bg-primary clr-red">
 
         <div class="container">
-            <div>
-                <div>
-                    <a href="#">
-                        <img src="./images/logo/logo.svg" alt="Logo">
+            <div class="footer_container">
+                 <div class="logo_social_media">
+                    <a  href="#">
+                        <img width="160" src="./images/logo/logo.svg" alt="Logo">
                     </a>
 
                     <ul role="list">
@@ -484,72 +534,71 @@
                     </ul>
 
                     <div>
-                        <h1>Политика конфиденциальности</h1>
-                        <p>ИП Журавлева Елена Андреевна
+                        <h1 class="ff-regular fw-400 clr-white fs-14 ">Политика конфиденциальности</h1>
+                        <p class="fw-300 ff-light clr-text-100 fs-14 mt-16">ИП Журавлева Елена Андреевна
                             ИНН 470411485269
                             ОГРНИП 311784704700400</p>
                     </div>
 
-                    <div>
-                        <h1>© Красный Дракон 1996 - 2021</h1>
-                        <h1>Created by <a href="#">Quadrodizain</a><img src="./images/icons/arrow_up_footer.svg" alt="Arrow"></h1>
+                    <div class="created_container">
+                        <h1 class="fw-300 ff-light clr-text-100 fs-14">© Красный Дракон 1996 - 2021</h1>
+                        <h1 class="created | fw-300 ff-light clr-text-100 fs-14">Created by <a href="#" class="clr-white">Quadrodizain</a><img src="./images/icons/arrow_up_footer.svg" alt="Arrow"></h1>
                     </div>
                 </div>
 
 
-                <div>
+                <div class="container_informatia">
                     <h1>Информация</h1>
                     <nav>
-                        <ul class="footer_nav">
-
-                        </ul>
+                        <ul class="footer_nav"></ul>
                     </nav>
                 </div>
 
-                <div>
+                <div class="container_magazin">
                     <h1>Магазин</h1>
 
                     <nav class="footer_magazin"></nav>
                 </div>
 
-                <div>
-                    <div>
-                        <h1>Контакты</h1>
+                <div class="contacte_magazin">
 
-                        <ul>
-                            <li><a href="tel:8 (812) 701 01 87"><h1>8 (812) 701 01 87</h1></a></li>
-                            <li><a href="tel:8 (812) 701 02 02"><h1>8 (812) 701 02 02</h1></a></li>
-                            <li><a href="#">reddragon-spb@mail.ru</a></li>
-                            <li>Пн—Вс 10:00—21:00</li>
+                    <div>
+                        <h1 class="ff-semin-bold fw-600 clr-text-silver fs-16">Контакты</h1>
+
+                        <ul class="mt-16">
+                            <li><a href="tel:8 (812) 701 01 87"><h1 class="ff-bold clr-white fs-16 fw-700">8 (812) 701 01 87</h1></a></li>
+                            <li><a href="tel:8 (812) 701 02 02"><h1 class="ff-bold clr-white fs-16 fw-700">8 (812) 701 02 02</h1></a></li>
+                            <li><a href="#" class="fs-btn-item text-underline clr-text-active ff-regular">reddragon-spb@mail.ru</a></li>
+                            <li class="fs-btn-item clr-text-100 ff-light">Пн—Вс 10:00—21:00</li>
                         </ul>
                     </div>
 
 
                     <div>
-                        <h1>Магазины</h1>
+                        <h1 class="ff-semin-bold fw-600 clr-text-silver fs-16" >Магазины</h1>
 
-                       <div>
-                            <div>
-                                <button>
+                       <div class="location_magazin |  mt-16">
+                            <!-- <div class="border-radius-fixes-8">  -->
+                                <button class="border-radius-fixes-8">
                                     <img src="./images/icons/location.svg" alt="Location">
-                                    Санкт-Петербург
+                                    <p class="fs-14 ff-regular clr-white fw-400">Санкт-Петербург</p>
                                 </button>
-                            </div>
+                            <!-- </div> -->
 
-                            <div>
-                                <button>
+                            
+                                <button class="border-radius-fixes-8">
                                     <img src="./images/icons/location.svg" alt="Location">
-                                    Крым
+                                    <p class="fs-14 ff-regular clr-white fw-400">Крым</p>
                                 </button>
-                            </div>
+                            
 
 
-                            <div>
-                                <button>
+                            
+                                <button class="border-radius-fixes-8">
                                     <img src="./images/icons/location.svg" alt="Location">
-                                    Ярославль
+                                    <p  class="fs-14 ff-regular clr-white fw-400">Ярославль</p>
                                 </button>
-                            </div>
+                            
 
 
                        </div>

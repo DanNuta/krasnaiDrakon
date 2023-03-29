@@ -157,6 +157,9 @@ function createMenuHelper(target){
 
 
 function createItemHealperDom(target){
+    let windowSize = window.innerWidth;
+
+    const width = window.innerWidth;
     const divContainer = document.createElement("div");
     const titleItem = document.createElement("h1");
     const btnAddToCard = document.createElement("button");
@@ -165,8 +168,11 @@ function createItemHealperDom(target){
     const btnReducePrice = document.createElement("button");
     const pPriceReduction = document.createElement("p");
     const pPrice = document.createElement("p");
-
     const divShop = document.createElement("div");
+
+    const divPriceWithReduction = document.createElement("div");
+
+    divShop.classList.add("flex_justify_center_item");
 
     const divTags = document.createElement("div");
 
@@ -179,8 +185,21 @@ function createItemHealperDom(target){
     divTags.classList.add("tags")
 
 
+    console.log(windowSize)
+
+    if(target.title.length > 20 && windowSize <= 320){
+        const title = target.title.substring(0, 20);
+        titleItem.innerHTML = `${title}...`;
+    }else{
+        titleItem.innerHTML = `${target.title}`;
+    }
+
+
     // title
-    titleItem.innerHTML = target.title;
+    titleItem.classList.add("ff-regular");
+    titleItem.classList.add("fw-400");
+    titleItem.classList.add("fs-title-item");
+    titleItem.classList.add("text-center")
 
     // img
     target.img.forEach(item => {
@@ -200,8 +219,16 @@ function createItemHealperDom(target){
         pPriceReduction.classList.add("text-throw");
         pPriceReduction.classList.add("clr-text-silver");
 
-        divPriceReduction.append(pPriceReduction);
-        divPriceReduction.append(btnReducePrice);
+        divPriceReduction.classList.add("flex_justify")
+
+        divPriceWithReduction.append(pPriceReduction);
+        divPriceWithReduction.classList.add("flex_align")
+
+        divPriceWithReduction.append(pPriceReduction);
+        divPriceWithReduction.append(btnReducePrice);
+        divPriceReduction.append(divPriceWithReduction);
+    }else{
+        pPrice.classList.add("text-center")
     }
 
     pPrice.innerHTML = `${target.price}₽`;
@@ -212,7 +239,7 @@ function createItemHealperDom(target){
     divPriceReduction.append(pPrice);
 
     divPriceReduction.classList.add("price_reducer_div");
-    divPriceReduction.classList.add("flex_justify")
+    
 
     btnAddToCard.innerHTML = "В корзину";
     btnAddToCard.classList.add("btn_add_to_card");
@@ -229,18 +256,21 @@ function createItemHealperDom(target){
     if(target.tags.new){
         const btn = document.createElement("button");
         btn.innerHTML = "New!";
+        btn.classList.add("news");
         divTags.append(btn);
     }
 
     if(target.tags.sale){
         const btn = document.createElement("button");
         btn.innerHTML = "Sale!";
+        btn.classList.add("sale")
         divTags.append(btn);
     }
 
     if(target.tags.shippingRestrictions){
         const btn = document.createElement("button");
         btn.innerHTML = "Ограничения по доставке";
+        btn.classList.add("other_text")
         divTags.append(btn);
     }
 
