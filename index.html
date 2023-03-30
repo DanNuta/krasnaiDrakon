@@ -80,7 +80,7 @@
                                 <img src="./images/icons/iconNav/user.svg" alt="user">
                             </button>
                         </div>
-                        <div data-wishlist="0">
+                        <div data-wishlist="0" style="--display_none: none">
                             <button class="flex_center_column_row" >
                                 <img src="./images/icons/iconNav/cart.svg" alt="user">
                             </button>
@@ -199,11 +199,16 @@
 
         <!-- home -->
 
-        <section>
+        <section class="slider_home">
             <div class="container">
                 <div>
                     <div class="images_slider">
                         <ul class="slider_ul"></ul>
+
+                        <div class="arrow">
+                           <button data-prev class="flex_center_column_row"><img src="./images/icons/arrowLeft.svg" alt="Arrow Left"></button>
+                           <button data-next class="flex_center_column_row"><img src="./images/icons/arrowRight.svg" alt="Arrow Right"></button>
+                        </div>
                         
                         <div class="dots"></div>
                     </div>
@@ -487,21 +492,21 @@
            <!-- next food -->
 
 
-           <section class="food_testimonials">
+           <section class="food_testimonials | clr-project-4">
 
             <div class="container">
                
-                    <div class="title_btn">
+                    <div class="title_btn | flex_justify_center mb-24">
                         <div>
-                            <h1>Последние отзывы</h1>
+                            <h1 class="ff-bold fw-700 clr-text-primary fs-primary-header">Последние отзывы</h1>
                         </div>
 
-                        <div class="next_prev">
-                            <button>
+                        <div class="next_prev | flex_align_custom" style="--gap-custom: 1rem">
+                            <button  class="circle_btn flex_center_column_row">
                                 <img src="./images/icons/arrowLeft.svg" alt="">
                             </button>
 
-                            <button>
+                            <button class="circle_btn flex_center_column_row">
                                 <img src="./images/icons/arrowRight.svg" alt="">
                             </button>
                         </div>
@@ -509,7 +514,7 @@
             </div>
 
 
-            <div class="testimpnials_food"></div>
+            <div class="testimpnials_food " style="--gap-custom: 1.5rem"></div>
            </section>
 
     </main>

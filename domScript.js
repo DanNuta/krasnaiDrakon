@@ -66,6 +66,16 @@ sliderHome.forEach(item => {
     const title = document.createElement("h1");
     const content = document.createElement("p");
 
+    title.classList.add("fs-slider-title");
+    title.classList.add("line-height-slider-title")
+    title.classList.add("fw-600");
+    title.classList.add("ff-semin-bold");
+
+    content.classList.add("fw-400");
+    content.classList.add("fs-14");
+    content.classList.add("ff-regular");
+    content.classList.add("clr-text-secondary")
+
 
 
     divContainer.classList.add("slider_container");
@@ -293,6 +303,9 @@ function createRatingHelperDom(target){
 
     const div = document.createElement("div");
 
+    div.classList.add("flex_align_custom");
+    div.setAttribute("style", "--gap-custom: 3px")
+
 
     for(let i = 0; i < target.rating; i++){
         const img = document.createElement("img");
@@ -303,34 +316,44 @@ function createRatingHelperDom(target){
 
 
    const item = `
-   <div>
-   <div>
-       <div>
+   <div class="testimonials | border-radius-fixes-16">
 
-           <div>
-               <img src='${target.img}' alt="lapte">
-           </div>
+      <div class="flex f_d_column gap_testimonials">
 
-           <div>
-               <h1>${target.title}</h1>
-               ${div.outerHTML}
-           </div>
-       </div>
+      <div>
+        <div class="flex_align_custom mb-16" style="--gap-custom: 1.5rem">
+
+            <div>
+                <img class="width-100" src='${target.img}' alt="lapte">
+            </div>
+
+            <div>
+                <h1 class="line-height-24 fs-16 ff-semin-bold clr-text-primary fw-600 mb-10">${target.title}</h1>
+                ${div.outerHTML}
+            </div>
+        </div>
+      
+        <div>
+            <p class="fs-14 ff-regular fw-400 line-height-22 clr-text-secondary">${target.content}</p>
+        </div>
 
 
-       <div>
-           <p>${target.content}</p>
-       </div>
+      </div>
 
 
-       <div>
-           <div>
+
+
+
+
+       <div class="flex_align_custom " style="--gap-custom: .625rem">
+       
+           <div class="justify_center flex_align_custom circle_btn" style="--gap-custom: .625rem; --bg_custom_circle: #EDF3F0 ">
                <img src=${target.author.img} alt="user">
            </div>
 
            <div>
-               <h1>${target.author.name}</h1>
-               <p>${target.author.timeStamp}</p>
+               <h1 class="fs-14 ff-semin-bold fw-600 clr-text-primary">${target.author.name}</h1>
+               <p class="ff-light fs-12 fw-300">${target.author.timeStamp}</p>
            </div>
        </div>
    </div>

@@ -239,6 +239,7 @@ export const ratindProducts = [
         title: "Водоросли даши Комбу 200 гр",
         rating: 5,
         content: `Соотношение цена-качество на пятерку.
+        
         Брала чисто для бульона. Получается прекрасно, на вкус что надо✌? Получается хорошая основа для супов и...`,
         author: {
             img: "./images/recenzii/people/1.png",
@@ -321,14 +322,14 @@ export const sliderHome = [
         id: 2,
         img: "./images/slider/1.png",
         title: "Мисо-супы японского бренда Marukome",
-        content: "Лучшие цены на всю серию продуктов"
+        content: "Dan"
     },
 
     {
         id: 3,
         img: "./images/slider/1.png",
         title: "Мисо-супы японского бренда Marukome",
-        content: "Лучшие цены на всю серию продуктов"
+        content: "Lorem ipsum dolor"
     },
 
     {

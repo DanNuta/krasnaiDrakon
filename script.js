@@ -10,14 +10,244 @@ const listAllItems = document.querySelector("[data-items]");
 
 const wishlistLengthCard = document.querySelector("[data-wishlist]");
 
-const jsonData =JSON.parse(localStorage.getItem("shop"));
 
-if(jsonData){
-    wishlistLengthCard.setAttribute("data-wishlist", `${jsonData.length}`);
+// testimonials food
+
+const testimonialsFood = document.querySelector(".testimpnials_food");
+const testimonialsItems = document.querySelectorAll(".testimonials");
+const btns = document.querySelector(".next_prev");
+const btnNextTestimonials = btns.querySelector("button:last-child");
+const btnPrevTestimonials = btns.querySelector("button:first-child");
+
+const widthTestimonial = testimonialsItems[0].getBoundingClientRect().width;
+
+
+testimonialsItems[1].classList.add("active_testimonial")
+
+
+
+testimonialsItems.forEach((item, i) => {
+     item.style.left = widthTestimonial * i + `px`;
+     item.style.marginLeft = `${i * 24}px`;
+})
+
+// let counter = 1;
+btnNextTestimonials.addEventListener("click", function(){
+    
+    
+    const active = document.querySelector(".active_testimonial");
+    const nextTestimonial = active.nextElementSibling;
+
+    
+
+    active.classList.remove("active_testimonial");
+    nextTestimonial.classList.add("active_testimonial");
+
+    const amount = active.style.left;
+
+    // if(counter === testimonialsItems.length - 1){
+    //     counter = 1;
+    //     return;
+    // }
+
+   // const distante = testimonialsItems[counter].style.left;
+
+    testimonialsFood.style.transform = `translateX(-${amount}`;
+
+    counter++;
+    
+});
+
+
+// ----------------------------------------------------------------
+btnPrevTestimonials.addEventListener("click", function(){
+
+   // testimonialsItems[counter].classList.add("active_testimonial");
+
+
+    const active = document.querySelector(".active_testimonial");
+
+    const prevTestimonial = active.previousElementSibling;
+    
+    
+    active.classList.remove("active_testimonial");
+    prevTestimonial.classList.add("active_testimonial");
+    
+    const amount = prevTestimonial.style.left;
+    
+
+    console.log(active)
+   // const distante = parseInt(testimonialsItems[3].style.left);
+
+    //const diff = distante - parseInt(widthTestimonial);
+
+    //console.log(distante, counter,  diff)
+
+
+
+     testimonialsFood.style.transform = `translateX(-${amount}`;
+
+    // counter++;
+})
+
+
+
+// slider home
+const ulSlider = document.querySelector(".slider_ul");
+const liSLider = ulSlider.querySelectorAll("li");
+const btnPrev = document.querySelector("[data-prev]");
+const btnNext = document.querySelector("[data-next]");
+const dots = document.querySelector(".dots");
+const allDots = dots.querySelectorAll("button");
+
+const widthLi = liSLider[0].getBoundingClientRect().width;
+
+
+
+// mobile style 
+
+
+
+let coordonate = {
+    right: null,
+    left: null,
+    x1: null
 }
 
 
 
+liSLider.forEach(item => {
+    item.addEventListener("touchstart", function(e){
+        const target = e.touches[0];
+        coordonate.x1 = target.clientX;
+        
+        if(widthLi  / 2 <= target.clientX){
+            coordonate.right = "right"
+        }else{
+            coordonate.left = "left"
+        }
+    });
+
+
+    item.addEventListener("touchmove", function(e){
+        const target = e.touches[0];
+        let x2 = target.clientX;
+        let diff = x2 - coordonate.x1;
+
+        
+        if(coordonate.right && diff >= -5){
+            swipeRight();
+        }
+
+        if(coordonate.left){
+             swipeLeft();
+        }
+        
+
+       
+    })
+})
+
+
+
+// desktop style
+
+allDots[0].classList.add("active_dots");
+
+btnPrev.setAttribute("style", "opacity: .5");
+
+liSLider[0].classList.add("active");
+
+liSLider.forEach((item, i) => {
+    item.style.left = widthLi * i + `px`;
+});
+
+function swipeRight(){
+    const activeCurent = ulSlider.querySelector(".active");
+    const nextSlider = activeCurent.nextElementSibling;
+
+    const activeDots = dots.querySelector(".active_dots");
+    const nextDots = activeDots.nextElementSibling;
+
+   
+
+
+    if(!nextSlider){
+        return
+    }else{
+
+        if(!nextSlider.nextElementSibling){
+            btnNext.setAttribute("style", "opacity: .5")
+        }
+
+        btnPrev.setAttribute("style", "opacity: 1");
+
+    }
+
+
+    activeCurent.classList.remove("active");
+    nextSlider.classList.add("active");
+
+
+    activeDots.classList.remove("active_dots");
+    nextDots.classList.add("active_dots")
+
+    const moveLeft = nextSlider.style.left;
+
+    ulSlider.style.transform = `translateX(-${moveLeft}`;
+}
+
+
+function swipeLeft(){
+    const activeCurent = ulSlider.querySelector(".active");
+    const prevSlider = activeCurent.previousElementSibling;
+
+    const activeDots = dots.querySelector(".active_dots");
+    const prevDots = activeDots.previousElementSibling;
+
+    if(!prevSlider){
+        btnPrev.setAttribute("style", "opacity: .5");
+        return
+    }else{
+
+        if(!prevSlider.previousElementSibling){
+            btnPrev.setAttribute("style", "opacity: .5")
+        }
+        btnNext.setAttribute("style", "opacity: 1")
+    }
+
+    activeCurent.classList.remove("active");
+    prevSlider.classList.add("active");
+
+
+    activeDots.classList.remove("active_dots");
+    prevDots.classList.add("active_dots")
+
+    const moveLeft = prevSlider.style.left;
+
+    ulSlider.style.transform = `translateX(-${moveLeft}`;
+}
+
+
+btnNext.addEventListener("click", function(){
+    swipeRight();
+})
+
+
+btnPrev.addEventListener("click", function(){
+    swipeLeft()
+})
+
+// slider home 
+
+const jsonData = JSON.parse(localStorage.getItem("shop"));
+
+if(jsonData){
+    wishlistLengthCard.setAttribute("data-wishlist", `${jsonData.length}`);
+    wishlistLengthCard.setAttribute("style", `--display_none: flex`);
+}else{
+    wishlistLengthCard.setAttribute("style", `--display_none: none`);
+}
 
 navBarsClose.addEventListener("click", function(){
     desktopStyleNavbar.classList.remove("active_nav_mobile");
@@ -93,6 +323,8 @@ function selectFromShop(){
                 const data = [];
                 data.push(item);
                 wishlistLengthCard.setAttribute("data-wishlist", `${1}`);
+                wishlistLengthCard.setAttribute("style", `--display_none: flex`);
+
                 localStorage.setItem('shop', JSON.stringify(data))
             }else{
                 
@@ -100,6 +332,8 @@ function selectFromShop(){
                 const newData = [...json, item];
 
                 wishlistLengthCard.setAttribute("data-wishlist", `${newData.length}`);
+                wishlistLengthCard.setAttribute("style", `--display_none: flex`);
+
 
                 console.log(newData)
 
