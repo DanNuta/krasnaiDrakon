@@ -66,17 +66,18 @@ btnPrevTestimonials.addEventListener("click", function(){
 
 
     const active = document.querySelector(".active_testimonial");
+    const prevTestimonial = active.previousElementSibling.previousElementSibling;
 
-    const prevTestimonial = active.previousElementSibling;
     
     
-    active.classList.remove("active_testimonial");
-    prevTestimonial.classList.add("active_testimonial");
+     active.classList.remove("active_testimonial");
+     prevTestimonial.classList.add("active_testimonial");
     
     const amount = prevTestimonial.style.left;
+    console.log(prevTestimonial)
     
 
-    console.log(active)
+    // console.log(active)
    // const distante = parseInt(testimonialsItems[3].style.left);
 
     //const diff = distante - parseInt(widthTestimonial);
