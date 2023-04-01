@@ -11,6 +11,18 @@ const listAllItems = document.querySelector("[data-items]");
 const wishlistLengthCard = document.querySelector("[data-wishlist]");
 
 
+
+// show nav more
+
+const moreNav = document.querySelector("#show_full_nav");
+const extendNavList = document.querySelector(".extend_nav_list");
+
+moreNav.addEventListener("click", function(){
+    extendNavList.classList.toggle("laptop_active_nav")
+})
+
+
+
 // testimonials food
 
 const testimonialsFood = document.querySelector(".testimpnials_food");

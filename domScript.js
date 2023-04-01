@@ -6,7 +6,8 @@ import {
     ratindProducts,
     footerMagazinList,
     sliderHome,
-    extendNavLaptop
+    extendNavLaptop,
+    navLeptop
  } from "./constants/items.js";
 
 
@@ -25,10 +26,27 @@ extendNavLaptop.forEach(item => {
     extendNavList.append(createLiNavLaptop(item))
 })
 
+const width = window.innerWidth;
 
-navTablet.forEach(item => {
-  laptopNav.append(healperHtmlNav(item));
-});
+// if(width >= 768){
+    navTablet.forEach(item => {
+        laptopNav.setAttribute("style", "--gap-custom: 1.5rem");
+        laptopNav.classList.add("flex_align_custom")
+      laptopNav.append(healperHtmlNav(item));
+    });
+//}
+
+// if(width >= 992){
+//     navLeptop.forEach(item => {
+//         laptopNav.setAttribute("style", "--gap-custom: 1.5rem");
+//         laptopNav.classList.add("flex_align_custom")
+//       laptopNav.append(healperHtmlNav(item));
+//     });
+// }
+
+
+
+
 
 navDesktop.forEach(item => {
     desktopNav.append(healperHtmlNav(item));
@@ -117,6 +135,14 @@ function healperHtmlNav(target){
     a.href = `#${target}`;
     a.textContent = `${target}`;
 
+    a.classList.add("ff-regular");
+    a.classList.add("clr-text-silver")
+    a.classList.add("fs-12")
+
+    if(target === "Еще"){
+        a.setAttribute("id", "show_full_nav")
+    }
+
     li.append(a);
     ul.append(li);
 
@@ -129,6 +155,11 @@ function createLiNavLaptop(target){
     const a = document.createElement("a");
     a.href = `#${target}`;
     a.textContent = `${target}`;
+
+    a.classList.add("ff-regular");
+    a.classList.add("fw-400");
+    a.classList.add("fs-14");
+    a.classList.add("clr-text-silver")
 
     li.append(a);
 
@@ -156,7 +187,6 @@ function createMenuHelper(target){
     img.src = target.img;
     h1.textContent = target.title;
 
-    
     divContainer.append(divImage);
     divContainer.append(h1);
     divImage.append(img)
@@ -169,7 +199,6 @@ function createMenuHelper(target){
 function createItemHealperDom(target){
     let windowSize = window.innerWidth;
 
-    const width = window.innerWidth;
     const divContainer = document.createElement("div");
     const titleItem = document.createElement("h1");
     const btnAddToCard = document.createElement("button");
@@ -300,7 +329,6 @@ function createItemHealperDom(target){
 
 
 function createRatingHelperDom(target){
-
     const div = document.createElement("div");
 
     div.classList.add("flex_align_custom");

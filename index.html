@@ -20,12 +20,12 @@
 
                 <div class="column_navigation_odd">
                     <div class="mobile-style | flex_align">
+
                         <button class="flex_center_column_row" id="open_nav_mobile">
                             <img src="./images/icons/menuBars.svg" alt="bars">
                         </button>
 
                         <p class="fw-400 fs-12 ff-regular clr-text-primary">Меню</p>
-
 
                     </div>
 
@@ -39,25 +39,28 @@
                     </div> -->
 
                     <div class="laptop-style">
-                        <div>
-                            <a href="#"><p>Магазины</p></a>
-                            <span>
+                        <div class="flex_align_custom" style="--gap-custom: 1.5rem" >
+                            <a href="#"><p class="ff-regular fw-400 fs-12 clr-red">Магазины</p></a>
+                            <span class="flex_align_custom" style="--gap-custom: .625rem">
                                 <img src="./images/icons/location.svg" alt="location">
-                                Санкт-Петербург
+                               <p class="ff-regular fw-400 fs-14 clr-bg-secondary">Санкт-Петербург</p>
                             </span>
 
-                            <span>
+                            <span class="flex_align_custom" style="--gap-custom: .625rem">
                                 <img src="./images/icons/mail.svg" alt="location">
-                                reddragon-spb@mail.ru
+                               <p class="ff-regular fw-400 fs-14 clr-bg-secondary text-underline">reddragon-spb@mail.ru</p>
                             </span>
                         </div>
                     </div>
+
                     <div class="desktop-style"></div>
+
+    
                 </div>
 
 
 
-                <div>
+                <div class="column_center_header">
                     <div class="mobile-style flex_center_column_row">
                         <a class="flex_align"  href="#">
                             <img width="160" src="./images/logo/logo.svg" alt="logo">
@@ -87,14 +90,18 @@
                         </div>
                     </div>
 
-                    <div class="laptop-style">
-                        <nav role="list" class="nav-laptop"></nav>
-                        <ul class="extend_nav_list"></ul>
+
+                    <div class="laptop-style header_nav_laptop">
+
+                        <nav role="list" class="nav-laptop flex"></nav>
+
+                        <ul class="extend_nav_list  | bg-white border-radius-fixes-16"></ul>
                     </div>
+
+
 
                     <div class="desktop-style-navigation disable_nav_mobile">
 
-                       
                             <div>
                                 <button id="nav_bars_close" class="flex_center">
                                     <img src="./images/icons/close.svg" alt="">
@@ -116,10 +123,10 @@
         <div class="container">
             <div class="search">
 
-                <div>
+                <div class="search_header">
                     <div class="logo laptop-style">
                         <a href="#">
-                            <img src="./images/logo/logo.svg" alt="logo">
+                            <img width="200px" src="./images/logo/logo.svg" alt="logo">
                         </a>
                     </div>
 
@@ -164,28 +171,37 @@
 
 
 
-                <div class="laptop-style">
+                <div class="laptop-style search_column_odd_header">
+
                     <a href="tel:123-456-7890">
-                        <div>
-                            <img src="./images/icons/calling.svg" alt="call">
-                            <h1>8 (812) 701 01 87</h1>
-                        </div>
-                        <div>
-                            <p>Обратный звонок</p>
+                        <div class="flex gap_custom" style="--gap_custom: .625rem">
+                            <div>
+                                <img src="./images/icons/calling.svg" alt="call">
+                            </div>
+                            <div>
+                                <h1 class="ff-bold clr-text-primary fs-16 fw-700">8 (812) 701 01 87</h1>
+                                <p class="ff-regular fs-12 clr-text-secondary fw-400">Обратный звонок</p>
+                            </div>
                         </div>
                     </a>
 
 
                     <button>
                         <img src="./images/icons/iconNav/user.svg" alt="user">
-                        Вход
+                        <p class="ff-regular fs-12 clr-text-secondary fw-400">Вход</p>
                     </button>
+
+
+                   
+                        
+                        <button data-wishlist="0">
+                            <img src="./images/icons/iconNav/cart.svg" alt="card">
+                            <p class="ff-regular fs-12 clr-text-secondary fw-400">Корзина</p>
+                        </button>
+                    
                     
 
-                    <button>
-                        <img src="./images/icons/iconNav/cart.svg" alt="card">
-                        Корзина
-                    </button>
+
                 </div>
 
 
@@ -331,12 +347,7 @@
             </div>
          </section>
 
-
-
-
-
          <!-- project mobile -->
-
 
          <section class="mobile_project">
             <div class="container">
