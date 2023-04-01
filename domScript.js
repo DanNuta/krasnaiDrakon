@@ -7,7 +7,6 @@ import {
     footerMagazinList,
     sliderHome,
     extendNavLaptop,
-    navLeptop
  } from "./constants/items.js";
 
 
