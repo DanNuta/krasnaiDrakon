@@ -9,6 +9,10 @@ const btnFilterNew = document.querySelector("[data-new]");
 const listAllItems = document.querySelector("[data-items]");
 
 const wishlistLengthCard = document.querySelector("[data-wishlist]");
+const wishlistLengthCardDesk = document.querySelector("[data-wishlistDesk]");
+
+console.log(wishlistLengthCardDesk)
+
 
 
 
@@ -231,8 +235,14 @@ const jsonData = JSON.parse(localStorage.getItem("shop"));
 if(jsonData){
     wishlistLengthCard.setAttribute("data-wishlist", `${jsonData.length}`);
     wishlistLengthCard.setAttribute("style", `--display_none: flex`);
+
+    wishlistLengthCardDesk.setAttribute("data-wishlist", `${jsonData.length}`);
+    wishlistLengthCardDesk.setAttribute("style", `--display_none: flex`);
 }else{
     wishlistLengthCard.setAttribute("style", `--display_none: none`);
+
+    wishlistLengthCardDesk.setAttribute("style", `--display_none: none`);
+
 }
 
 navBarsClose.addEventListener("click", function(){
@@ -311,6 +321,13 @@ function selectFromShop(){
                 wishlistLengthCard.setAttribute("data-wishlist", `${1}`);
                 wishlistLengthCard.setAttribute("style", `--display_none: flex`);
 
+                
+
+                wishlistLengthCardDesk.setAttribute("data-wishlist", `${1}`);
+                wishlistLengthCardDesk.setAttribute("style", `--display_none: flex`);
+
+                
+
                 localStorage.setItem('shop', JSON.stringify(data))
             }else{
                 
@@ -320,8 +337,10 @@ function selectFromShop(){
                 wishlistLengthCard.setAttribute("data-wishlist", `${newData.length}`);
                 wishlistLengthCard.setAttribute("style", `--display_none: flex`);
 
+                wishlistLengthCardDesk.setAttribute("data-wishlist", `${newData.length}`);
+                wishlistLengthCardDesk.setAttribute("style", `--display_none: flex`);
 
-                console.log(newData)
+                
 
                 localStorage.setItem('shop', JSON.stringify(newData))
 

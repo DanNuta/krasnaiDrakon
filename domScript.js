@@ -350,7 +350,7 @@ function createRatingHelperDom(target){
       <div>
         <div class="flex_align_custom mb-16" style="--gap-custom: 1.5rem">
 
-            <div>
+            <div class="align_self_start">
                 <img class="width-100" src='${target.img}' alt="lapte">
             </div>
 
