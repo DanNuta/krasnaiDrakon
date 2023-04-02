@@ -313,6 +313,22 @@ export const ratindProducts = [
         }
     },
 
+    {
+        id: 6,
+        img: "./images/recenzii/images/1.png",
+        title: "Водоросли даши Комбу 200 гр",
+        rating: 5,
+        content: `Соотношение цена-качество на пятерку.
+        
+        Брала чисто для бульона. Получается прекрасно, на вкус что надо✌? Получается хорошая основа для супов и...`,
+        author: {
+            img: "./images/recenzii/people/1.png",
+            name: "Александр",
+            timeStamp: "19 августа 2021 14:43",
+        }
+    },
+
+
 
 ];
 

@@ -16,10 +16,13 @@ const menuDom = document.querySelector(".menu");
 const itemDom = document.querySelector(".item");
 const testimonialFood = document.querySelector(".testimpnials_food");
 const navFooter = document.querySelector(".footer_nav");
-const footerMagazin = document.querySelector(".footer_magazin");
+const footerMagazin = document.querySelector(".footer_magazin_li");
 const extendNavList = document.querySelector(".extend_nav_list");
 const dots = document.querySelector(".dots");
 const slider = document.querySelector(".slider_ul");
+
+
+
 
 extendNavLaptop.forEach(item => {
     extendNavList.append(createLiNavLaptop(item))
@@ -27,29 +30,24 @@ extendNavLaptop.forEach(item => {
 
 const width = window.innerWidth;
 
-// if(width >= 768){
+
     navTablet.forEach(item => {
         laptopNav.setAttribute("style", "--gap-custom: 1.5rem");
         laptopNav.classList.add("flex_align_custom")
       laptopNav.append(healperHtmlNav(item));
     });
-//}
-
-// if(width >= 992){
-//     navLeptop.forEach(item => {
-//         laptopNav.setAttribute("style", "--gap-custom: 1.5rem");
-//         laptopNav.classList.add("flex_align_custom")
-//       laptopNav.append(healperHtmlNav(item));
-//     });
-// }
-
-
-
 
 
 navDesktop.forEach(item => {
     desktopNav.append(healperHtmlNav(item));
-    navFooter.append(healperHtmlNav(item))
+
+    const itemDom = healperHtmlNav(item);
+    itemDom.classList.add("mb-10")
+    const a = itemDom.querySelector("a");
+    a.classList.add("clr-white")
+
+
+    navFooter.append(itemDom);
 });
 
 
@@ -66,8 +64,16 @@ ratindProducts.forEach(item => {
     testimonialFood.innerHTML += testimonialFood.innerHTML  = (createRatingHelperDom(item));
 })
 
-footerMagazinList.forEach(item => {
-    footerMagazin.append(healperHtmlNav(item))
+footerMagazinList.forEach((item, i) => {
+    const itemDom = healperHtmlNav(item);
+    itemDom.classList.add("mb-10")
+    const a = itemDom.querySelector("a");
+    a.classList.add("clr-white")
+    footerMagazin.append(itemDom);
+    // const li = footerMagazin.querySelectorAll("li");
+     //const aLinks = [...footerMagazin.querySelectorAll("a")];
+     //li.classList.add("mb-10");
+     //aLinks[i].classList.add("clr-white");
 })
 
 sliderHome.forEach(item => {
@@ -119,7 +125,6 @@ sliderHome.forEach(item => {
     slider.append(li)
     dots.append(btnDots);
 
-
 })
 
 
@@ -128,7 +133,6 @@ sliderHome.forEach(item => {
 
 
 function healperHtmlNav(target){
-    const ul = document.createElement("ul");
     const li = document.createElement("li");
     const a = document.createElement("a");
     a.href = `#${target}`;
@@ -143,9 +147,8 @@ function healperHtmlNav(target){
     }
 
     li.append(a);
-    ul.append(li);
 
-    return ul;
+    return li;
 }
 
 
@@ -367,11 +370,6 @@ function createRatingHelperDom(target){
 
 
       </div>
-
-
-
-
-
 
        <div class="flex_align_custom " style="--gap-custom: .625rem">
        

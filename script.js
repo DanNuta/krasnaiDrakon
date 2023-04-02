@@ -33,83 +33,41 @@ moreNav.addEventListener("click", function(){
 
 // testimonials food
 
+
 const testimonialsFood = document.querySelector(".testimpnials_food");
 const testimonialsItems = document.querySelectorAll(".testimonials");
 const btns = document.querySelector(".next_prev");
-const btnNextTestimonials = btns.querySelector("button:last-child");
-const btnPrevTestimonials = btns.querySelector("button:first-child");
 
 const widthTestimonial = testimonialsItems[0].getBoundingClientRect().width;
 
 
-testimonialsItems[1].classList.add("active_testimonial")
+document.addEventListener("click", function(e){
+    let target;
 
+    if(e.target.matches(".handle")){
+        target = e.target;
+    }else{
+       target = e.target.closest(".handle")
+    }
 
+    if(target !== null) onChangeSlider(target);
 
-testimonialsItems.forEach((item, i) => {
-     item.style.left = widthTestimonial * i + `px`;
-     item.style.marginLeft = `${i * 24}px`;
 })
 
-// let counter = 1;
-btnNextTestimonials.addEventListener("click", function(){
-    
-    
-    const active = document.querySelector(".active_testimonial");
-    const nextTestimonial = active.nextElementSibling;
 
-    
+function onChangeSlider(target){
+    const container = target.closest(".food_testimonials").querySelector(".testimpnials_food");
+    const sliderIndex = parseInt(getComputedStyle(container).getPropertyValue("--slider"));
 
-    active.classList.remove("active_testimonial");
-    nextTestimonial.classList.add("active_testimonial");
+    if(target.classList.contains("handle_prev")){
+        container.style.setProperty("--slider", sliderIndex - widthTestimonial);
+    }
 
-    const amount = active.style.left;
-
-    // if(counter === testimonialsItems.length - 1){
-    //     counter = 1;
-    //     return;
-    // }
-
-   // const distante = testimonialsItems[counter].style.left;
-
-    testimonialsFood.style.transform = `translateX(-${amount}`;
-
-    counter++;
-    
-});
-
-
-// ----------------------------------------------------------------
-btnPrevTestimonials.addEventListener("click", function(){
-
-   // testimonialsItems[counter].classList.add("active_testimonial");
-
-
-    const active = document.querySelector(".active_testimonial");
-    const prevTestimonial = active.previousElementSibling.previousElementSibling;
-
-    
-    
-     active.classList.remove("active_testimonial");
-     prevTestimonial.classList.add("active_testimonial");
-    
-    const amount = prevTestimonial.style.left;
-    console.log(prevTestimonial)
-    
-
-    // console.log(active)
-   // const distante = parseInt(testimonialsItems[3].style.left);
-
-    //const diff = distante - parseInt(widthTestimonial);
-
-    //console.log(distante, counter,  diff)
-
-
-
-     testimonialsFood.style.transform = `translateX(-${amount}`;
-
-    // counter++;
-})
+    if(target.classList.contains("handle_next")){
+        console.log(container.getBoundingClientRect().width)
+        container.style.setProperty("--slider", sliderIndex + widthTestimonial);
+    }
+}
 
 
 

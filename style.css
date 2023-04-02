@@ -1389,6 +1389,14 @@ input::placeholder{
 }
 
 
+
+@media only screen and (min-width: 75rem){
+  .images_slider .slider_ul li .slider_container .slider_text_div h1{
+      font-size: var(--fs-56);
+  }
+}
+
+
 .images_slider .arrow{
   display: none;
 }
@@ -1627,6 +1635,7 @@ input::placeholder{
   }
 }
 
+
 .slogan{
   position: relative;
   height: 110px;
@@ -1635,10 +1644,16 @@ input::placeholder{
 @media only screen and (min-width: 20.0625rem){
   .slogan{
     height: 132px;
-    margin-bottom: var(--size-64);
   }
-
 }
+
+@media only screen and (min-width: 48rem){
+  .slogan{
+    height: 160px;
+  }
+}
+
+
 
 .slogan .text_slogan{
   position: absolute;
@@ -1900,7 +1915,6 @@ input::placeholder{
     grid-template-columns: 1fr 1fr;
     gap: var(--size-24);
   }
-
 }
 
 .exotic_food div{
@@ -2017,7 +2031,7 @@ input::placeholder{
   }
 
  
-  .exotic_food_incredients .container div div ul li{
+  .exotic_food_incredients .container ul li{
     position: relative;
     list-style: none;
     margin-left: var(--size-10);
@@ -2025,7 +2039,7 @@ input::placeholder{
    
   }
   
-  .exotic_food_incredients .container div div ul li p{
+  .exotic_food_incredients .container ul li p{
     font-size: var(--fs-16);
     font-family: AvertaRegular;
     font-weight: var(--fw-400);
@@ -2034,7 +2048,7 @@ input::placeholder{
 
 
 
-  .exotic_food_incredients .container div div ul li::before{
+  .exotic_food_incredients .container  ul li::before{
     content: "\2022";
     color: var(--clr-red);
     font-weight: bold;
@@ -2074,22 +2088,46 @@ input::placeholder{
 
 @media only screen and (min-width: 62rem){
   .food_exotic_container{
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: var(--size-24);
   }
+
+@media only screen and (min-width: 75rem){
+  .food_exotic_container{
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .food_exotic_container div:first-child{
+    grid-column: 1/6;
+    
+  }
+
+  .food_exotic_container div:last-child{
+    grid-column: 7/13;
+  }
+}
 
   .exotic_food_incredients .bg_css{
     position: absolute;
     width: 100%;
     height: auto;
     top: -15%;
-    /* bottom: 0; */
     z-index: -1;
     background-image: url("./images/about/bg.svg");
     background-repeat: no-repeat;
-    background-position: inherit;
-    
-    
+    background-position: inherit; 
+  }
+}
+
+@media only screen and (min-width: 75rem){
+  .exotic_food_incredients .bg_css{
+    background-position: center;
+    width: 100%;
+    height: auto;
+    left: 12%;
+    bottom: -10%;
+    opacity: .7;
   }
 }
 
@@ -2143,9 +2181,37 @@ input::placeholder{
   } */
 
   .food_testimonials .testimpnials_food .testimonials{
-    position: absolute;
+    /* position: absolute; */
     width: 40%;
     /* height: 500px; */
+  }
+}
+
+@media only screen and (min-width: 62rem){
+
+  .testimpnials_food_container{
+    background-color: green;
+    max-width: 1416px;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+
+  .food_testimonials .testimpnials_food{
+    --slider: 0;
+    transform: translateX(calc(var(--slider) * -1px));
+    transition: transform 500ms ease-in-out;
+    background-color: red;
+    width: 100%;
+    display: flex;
+    gap: var(--size-24);
+    margin-inline: auto;
+  }
+  
+  .food_testimonials .testimpnials_food .testimonials{
+    padding-inline: 12px ;
+    position: relative;
+    width: 25%;
+    flex: 0 0 calc(25% - var(--size-24));
   }
 }
 
@@ -2248,6 +2314,12 @@ footer .container .footer_container .logo_social_media{
 @media only screen and (min-width: 48rem){
   footer .container .footer_container .logo_social_media{
     grid-column: 1/5;
+  }
+}
+
+@media only screen and (min-width: 75rem){
+  footer .container .footer_container .logo_social_media{
+    grid-column: 1/4;
   }
 }
 
