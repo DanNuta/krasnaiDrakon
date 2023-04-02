@@ -16,12 +16,20 @@ const wishlistLengthCard = document.querySelector("[data-wishlist]");
 
 const moreNav = document.querySelector("#show_full_nav");
 const extendNavList = document.querySelector(".extend_nav_list");
+const allLiFromExtendNavList = extendNavList.querySelectorAll("li");
+
+
+allLiFromExtendNavList.forEach(item => {
+    item.addEventListener("click", function(){
+    extendNavList.classList.remove("laptop_active_nav")
+        
+    })
+})
+
 
 moreNav.addEventListener("click", function(){
     extendNavList.classList.toggle("laptop_active_nav")
 })
-
-
 
 // testimonials food
 

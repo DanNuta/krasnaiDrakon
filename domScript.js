@@ -315,7 +315,8 @@ function createItemHealperDom(target){
 
     divContainer.append(divImg);
     divContainer.append(titleItem);
-    divContainer.append(divPriceReduction);
+    divContainer.
+    append(divPriceReduction);
     divContainer.append(divShop)
     divContainer.append(divTags);
 
