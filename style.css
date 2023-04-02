@@ -2190,7 +2190,6 @@ input::placeholder{
 @media only screen and (min-width: 62rem){
 
   .testimpnials_food_container{
-    background-color: green;
     max-width: 1416px;
     margin-inline: auto;
     overflow: hidden;
@@ -2198,9 +2197,9 @@ input::placeholder{
 
   .food_testimonials .testimpnials_food{
     --slider: 0;
+    --nr-slider: 4;
     transform: translateX(calc(var(--slider) * -1px));
     transition: transform 500ms ease-in-out;
-    background-color: red;
     width: 100%;
     display: flex;
     gap: var(--size-24);
@@ -2214,9 +2213,6 @@ input::placeholder{
     flex: 0 0 calc(25% - var(--size-24));
   }
 }
-
-
-
 
 
 

@@ -70,10 +70,6 @@ footerMagazinList.forEach((item, i) => {
     const a = itemDom.querySelector("a");
     a.classList.add("clr-white")
     footerMagazin.append(itemDom);
-    // const li = footerMagazin.querySelectorAll("li");
-     //const aLinks = [...footerMagazin.querySelectorAll("a")];
-     //li.classList.add("mb-10");
-     //aLinks[i].classList.add("clr-white");
 })
 
 sliderHome.forEach(item => {

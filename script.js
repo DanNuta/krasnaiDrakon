@@ -38,7 +38,7 @@ const testimonialsFood = document.querySelector(".testimpnials_food");
 const testimonialsItems = document.querySelectorAll(".testimonials");
 const btns = document.querySelector(".next_prev");
 
-const widthTestimonial = testimonialsItems[0].getBoundingClientRect().width;
+const widthTestimonial = testimonialsItems[0].getBoundingClientRect().width + 24;
 
 
 document.addEventListener("click", function(e){
@@ -57,15 +57,22 @@ document.addEventListener("click", function(e){
 
 function onChangeSlider(target){
     const container = target.closest(".food_testimonials").querySelector(".testimpnials_food");
+    const totalNrSlider = container.children.length;
     const sliderIndex = parseInt(getComputedStyle(container).getPropertyValue("--slider"));
+    const nrSlider = parseInt(getComputedStyle(container).getPropertyValue("--nr-slider"));
 
     if(target.classList.contains("handle_prev")){
-        container.style.setProperty("--slider", sliderIndex - widthTestimonial);
+        if(nrSlider !== 4){
+            container.style.setProperty("--nr-slider", nrSlider - 1)
+            container.style.setProperty("--slider", sliderIndex - widthTestimonial);
+        }
     }
 
     if(target.classList.contains("handle_next")){
-        console.log(container.getBoundingClientRect().width)
-        container.style.setProperty("--slider", sliderIndex + widthTestimonial);
+        if(totalNrSlider !== nrSlider){
+            container.style.setProperty("--slider", sliderIndex + widthTestimonial);
+            container.style.setProperty("--nr-slider", nrSlider + 1)
+        }
     }
 }
 
