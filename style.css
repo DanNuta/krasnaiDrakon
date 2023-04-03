@@ -329,6 +329,7 @@ html,
 body{
     height: 100%;
     -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
 }
 
 /* Set core body defaults */
@@ -853,15 +854,15 @@ main section:not(:first-child) {
 .container{
    margin-inline: auto;
    max-width: var(--media-query-mobile);
-   width: 100%;
-   padding-inline: var(--padding-content);
+   width: calc(100%  - var(--padding-content));
+   /* padding-inline: var(--padding-content); */
 }
 
 
 @media only screen and (min-width: 20.0625rem){
   .container{
     max-width: var(--media-query-tablet);
-    width: 100%;
+    /* width: 100%; */
     
   }
 }
@@ -870,7 +871,7 @@ main section:not(:first-child) {
 @media only screen and (min-width: 48rem){
   .container{
     max-width: var(--media-query-laptop);
-    width: 100%;
+    /* width: 100%; */
    
   }
 }
@@ -879,7 +880,7 @@ main section:not(:first-child) {
 @media only screen and (min-width: 75rem){
   .container{
     max-width: 1416px;
-    width: 100%;
+    /* width: 100%; */
   }
 }
 
@@ -1990,6 +1991,10 @@ input::placeholder{
   gap: var(--size-16);
 }
 
+.exotic_food div button{
+  width: 100%;
+}
+
 @media only screen and (min-width: 20.0625rem){
   .exotic_food{
     grid-template-columns: 1fr 1fr;
@@ -2009,6 +2014,10 @@ input::placeholder{
     justify-content: space-between;
     height: 344px;
     padding: var(--size-36);
+  }
+
+  .exotic_food div button{
+    width: auto;
   }
 }
 
@@ -2239,10 +2248,27 @@ input::placeholder{
   }
 
 
-
-  .food_testimonials .testimpnials_food .testimonials{
-    width: 40%;
+  .testimpnials_food_container{
+    max-width: 720px;
+    width: calc(100% - var(--size-24));
+    margin-inline: auto;
+    /* overflow: hidden; */
   }
+
+  .food_testimonials .testimpnials_food{
+    --slider: 0;
+    --nr-slider: 2;
+    transform: translateX(calc(var(--slider) * -1px));
+    transition: transform 500ms ease-in-out;
+    width: 100%;
+    display: flex;
+    gap: var(--size-24);
+  }
+  
+  .food_testimonials .testimpnials_food .testimonials{
+    flex: 0 0 calc((100% / 2) - var(--size-24));
+  }
+
 
   .food_testimonials .testimpnials_food .testimonials > div{
     justify-content: space-between;
@@ -2252,25 +2278,16 @@ input::placeholder{
 
 @media only screen and (min-width: 48rem){
   .testimpnials_food_container{
-    max-width: 1140px;
-    padding-inline: var(--size-24);
-    width: 100%;
-    margin-inline: auto;
-    overflow: hidden;
+    max-width: 720px;
   }
 
   .food_testimonials .testimpnials_food{
     --slider: 0;
     --nr-slider: 3;
     transform: translateX(calc(var(--slider) * -1px));
-    transition: transform 500ms ease-in-out;
-    width: 100%;
-    display: flex;
-    gap: var(--size-24);
   }
   
   .food_testimonials .testimpnials_food .testimonials{
-    position: relative;
     flex: 0 0 calc((100% / 2.5) - var(--size-24));
   }
 }
@@ -2278,9 +2295,6 @@ input::placeholder{
 @media only screen and (min-width: 62rem){
   .testimpnials_food_container{
     max-width: 1140px;
-    padding-inline: 30px;
-    width: 100%;
-    margin-inline: auto;
     overflow: hidden;
   }
 
@@ -2288,14 +2302,10 @@ input::placeholder{
     --slider: 0;
     --nr-slider: 4;
     transform: translateX(calc(var(--slider) * -1px));
-    transition: transform 500ms ease-in-out;
-    display: flex;
-    gap: var(--size-24);
   }
   
   .food_testimonials .testimpnials_food .testimonials{
-    position: relative;
-    flex: 0 0 calc(25% - var(--size-24));
+    flex: 0 0 calc(25% - var(--size-18));
   }
 }
 
@@ -2309,14 +2319,8 @@ input::placeholder{
 
   .testimpnials_food_container{
     max-width: 1416px;
-    width: 100%;
-    /* margin-inline: 30px; */
+    width: calc(100% - var(--size-10));
   }
-
-  .food_testimonials .testimpnials_food{
-  }
-
- 
 }
 
 
@@ -2505,44 +2509,6 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
   line-height: 22px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* media query */
 
 .laptop-style, .tablet-style, .services{
@@ -2553,14 +2519,3 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
 .location_mail_search span img{
   display: none;
 }
-
-
-
-
-
-
-
-
-
-
-
