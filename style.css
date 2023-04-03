@@ -2562,7 +2562,7 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
 }
 
 
-.nav_bar_mobile .shop::after{
+.nav_bar_mobile .shop::before{
   content: attr(data-wishlist);
   position: absolute;
   justify-content: center;
@@ -2577,6 +2577,7 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
   right: 10px;
   background-color: var(--clr-red);
   display: var(--display_none);
+  z-index: 10;
 }
 
 
