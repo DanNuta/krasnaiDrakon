@@ -11,7 +11,30 @@ const listAllItems = document.querySelector("[data-items]");
 const wishlistLengthCard = document.querySelector("[data-wishlist]");
 const wishlistLengthCardDesk = document.querySelector("[data-wishlistDesk]");
 
-console.log(wishlistLengthCardDesk)
+
+
+// footer mobile nav
+
+document.addEventListener("click", function(e){
+    let handler;
+
+    if(e.target.matches(".btn_nav_mobile")){
+        handler = e.target;
+    }else{
+        handler = e.target.closest(".btn_nav_mobile");
+    }
+
+    if(handler !== null) {
+        const active = handler.closest(".nav_bar_mobile").querySelector(".active_mobile");
+
+        if(active !== null){
+            active.classList.remove("active_mobile");
+            handler.classList.add("active_mobile") 
+        }
+    }
+
+    
+})
 
 
 

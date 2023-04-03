@@ -2330,12 +2330,13 @@ input::placeholder{
 
 footer{
   padding-block: var(--size-48);
+  margin-bottom: var(--size-64);
 }
 
 @media only screen and (min-width: 20.0625rem){
   footer{
     padding-block: var(--size-64);
-    /* width: max-content; */
+    margin-bottom: 0;
   }
 }
 
@@ -2519,3 +2520,58 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
 .location_mail_search span img{
   display: none;
 }
+
+
+
+
+
+/* nav for mobile bottom */
+
+.active_mobile h1{
+  color: var(--clr-red);
+}
+
+
+
+.active_mobile img{
+  filter: invert(28%) sepia(82%) saturate(5621%) hue-rotate(352deg) brightness(89%) contrast(100%);
+}
+
+
+.nav_bar_mobile{
+ display: flex;
+ position: fixed;
+ bottom: 0;
+ left: 0;
+ right: 0;
+ z-index: 9999;
+ width: 100%;
+ background-color: var(--clr-white);
+}
+
+.nav_bar_mobile div {
+  width: calc(100% / 5);
+  position: relative;
+  text-align: center;
+  padding-block: var(--size-12);
+}
+
+
+.nav_bar_mobile .active_mobile::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  z-index: 10;
+  bottom: 0;
+  background-color: var(--clr-red);
+}
+@media only screen and (min-width: 20.0625rem){
+  .nav_bar_mobile{
+    display: none;
+  }
+}
+
+
+
