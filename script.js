@@ -10,6 +10,7 @@ const listAllItems = document.querySelector("[data-items]");
 
 const wishlistLengthCard = document.querySelector("[data-wishlist]");
 const wishlistLengthCardDesk = document.querySelector("[data-wishlistDesk]");
+const wishlistLengthCardMobile = document.querySelector("[data-wishlistMobile]");
 
 
 
@@ -261,10 +262,17 @@ if(jsonData){
 
     wishlistLengthCardDesk.setAttribute("data-wishlist", `${jsonData.length}`);
     wishlistLengthCardDesk.setAttribute("style", `--display_none: flex`);
+
+    wishlistLengthCardMobile.setAttribute("data-wishlist", `${jsonData.length}`);
+    wishlistLengthCardMobile.setAttribute("style", `--display_none: flex`);
+
+
 }else{
     wishlistLengthCard.setAttribute("style", `--display_none: none`);
 
     wishlistLengthCardDesk.setAttribute("style", `--display_none: none`);
+
+    wishlistLengthCardMobile.setAttribute("style", `--display_none: none`);
 
 }
 
@@ -349,6 +357,9 @@ function selectFromShop(){
                 wishlistLengthCardDesk.setAttribute("data-wishlist", `${1}`);
                 wishlistLengthCardDesk.setAttribute("style", `--display_none: flex`);
 
+                wishlistLengthCardMobile.setAttribute("data-wishlist", `${1}`);
+                wishlistLengthCardMobile.setAttribute("style", `--display_none: flex`);
+
                 
 
                 localStorage.setItem('shop', JSON.stringify(data))
@@ -362,6 +373,9 @@ function selectFromShop(){
 
                 wishlistLengthCardDesk.setAttribute("data-wishlist", `${newData.length}`);
                 wishlistLengthCardDesk.setAttribute("style", `--display_none: flex`);
+
+                wishlistLengthCardMobile.setAttribute("data-wishlist", `${newData.length}`);
+                wishlistLengthCardMobile.setAttribute("style", `--display_none: flex`);
 
                 
 

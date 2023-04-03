@@ -2547,6 +2547,7 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
  z-index: 9999;
  width: 100%;
  background-color: var(--clr-white);
+ border-top: 1px solid hsl(var(--hue), var(--saturation), var(--lightness), .2);
 }
 
 .nav_bar_mobile div {
@@ -2554,6 +2555,28 @@ footer .container .footer_container  .contacte_magazin div:nth-child(2) .locatio
   position: relative;
   text-align: center;
   padding-block: var(--size-12);
+}
+
+.nav_bar_mobile .shop{
+  position: relative;
+}
+
+
+.nav_bar_mobile .shop::after{
+  content: attr(data-wishlist);
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: var(--clr-white);
+  font-size: var(--fs-12);
+  font-family: AvertaBold;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  top: 6px;
+  right: 10px;
+  background-color: var(--clr-red);
+  display: var(--display_none);
 }
 
 
